@@ -10,7 +10,6 @@
   height: 250px;
   width: 100%;
   background-image: url("../images/belt.jpg");
-  background-size:auto;
 
   /* Flexbox Attributes*/
   display: flex;
@@ -21,6 +20,8 @@
 .flexPlateTop{
   height: 230px;
   width: 20%;
+  position: absolute;
+  right: 0;
 }
 /*image size*/
 .plateTop{
@@ -44,8 +45,10 @@
 .flexPlateBottom{
   height: 200px;
   width: 20%;
-
+  position: absolute;
+  left: 0;
 }
+
 /*image size*/
 .plateBottom{
   height:190px;
