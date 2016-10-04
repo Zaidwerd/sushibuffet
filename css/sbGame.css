@@ -1,0 +1,74 @@
+.gameboard{
+  height: auto;
+  width: 100%;
+  background-color: #e53935;
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+}
+
+.flexContainerTop{
+  height: 250px;
+  width: 100%;
+  background-image: url("../images/belt.jpg");
+  background-size:auto;
+
+  /* Flexbox Attributes*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flexPlateTop{
+  height: 230px;
+  width: 20%;
+}
+/*image size*/
+.plateTop{
+  height:220px;
+  width:220px;
+}
+
+
+.flexContainerBottom{
+  height: 200px;
+  width: 100%;
+  background-image: url("../images/belt.jpg");
+
+  /* Flexbox Attributes*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.flexPlateBottom{
+  height: 200px;
+  width: 20%;
+
+}
+/*image size*/
+.plateBottom{
+  height:190px;
+  width: 190px;
+}
+.scoreboard{
+  width:20%;
+  height:120px;
+  background-color: #000000;
+  display:inline-block;
+  float:left;
+}
+.timer{
+  width:20%;
+  height:120px;
+  background-color: #000000;
+  display:inline-block;
+  float:left;
+}
+.logo{
+  width:60%;
+  height:20%;
+  background-color: #ffffff;
+  display:inline-block;
+  float:left;
+}
