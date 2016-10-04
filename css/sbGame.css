@@ -11,30 +11,41 @@
   width: 100%;
   background-image: url("../images/belt.jpg");
 }
+
+/*Top Belt*/
 .plateTop1{
   height: 220px;
   width: 23%;
   position: absolute;
-  left: 300;
+  left: 256px;
 }
 .plateTop2{
   height: 220px;
   width: 23%;
   position: absolute;
-  left: 600px;
+  left: 512px;
 }
 .plateTop3{
   height: 220px;
   width: 23%;
   position: absolute;
-  left: 900px;
+  left: 768px;
 }
 .plateTop4{
   height: 220px;
   width: 23%;
   position: absolute;
-  left: 1200px;
+  left: 1024px;
 }
+.plateTop5{
+  height: 220px;
+  width: 23%;
+  position: absolute;
+  left: 1280px;
+}
+
+
+/*Bottom Belt*/
 .plateBottom1{
   height: 220px;
   width: 15%;
