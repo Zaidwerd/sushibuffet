@@ -48,21 +48,33 @@
 /*Bottom Belt*/
 .plateBottom1{
   height: 220px;
-  width: 15%;
+  width: 23%;
   position: absolute;
-  right: 0;
+  right: 256px;
 }
 .plateBottom2{
   height: 220px;
-  width: 15%;
+  width: 23%;
   position: absolute;
-  right: 50px;
+  right: 512px;
 }
 .plateBottom3{
   height: 220px;
-  width: 15%;
+  width: 23%;
   position: absolute;
-  right: 100px;
+  right: 768px;
+}
+.plateBottom4{
+  height: 220px;
+  width: 23%;
+  position: absolute;
+  right: 1024px;
+}
+.plateBottom5{
+  height: 220px;
+  width: 23%;
+  position: absolute;
+  right: 1280px;
 }
 
 /*image size*/
