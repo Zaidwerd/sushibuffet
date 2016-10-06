@@ -5,11 +5,12 @@
   text-align: center;
   font-family: 'Rock Salt', cursive;
 }
+
 /*Conveyor Belt*/
 .plateContainer{
   height: 230px;
   width: auto;
-  background-image: url("../images/belt.jpg");
+  background-image: url('../images/belt.jpg');
 }
 
 .sushiPlate{
@@ -21,6 +22,13 @@
   background-size: cover;
 }
 
+.goodSushi{
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  background-size: cover;
+  text-align: center;
+}
 /*Top Belt*/
 #plateTop1{
   left: 0px;
