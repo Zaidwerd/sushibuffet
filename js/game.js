@@ -1,7 +1,7 @@
 // Top Belt
 function movePlateTop(){
-  var $plate = $('.plateTop1');
-  var distance = 1280;
+  var $plate = $('#plateTop1');
+  var distance = 1000;
   setInterval(function(){
     $plate.css('left', distance + 'px');
     if (distance < -300) {
@@ -9,12 +9,12 @@ function movePlateTop(){
     } else {
       distance -= 5;
     }
-  }, 100);
+  },100);
 };
 
 function movePlateTop2(){
-  var $plate = $('.plateTop2');
-  var distance = 1024;
+  var $plate = $('#plateTop2');
+  var distance = 750;
   setInterval(function(){
     $plate.css('left', distance + 'px');
     if (distance < -300) {
@@ -26,8 +26,8 @@ function movePlateTop2(){
 };
 
 function movePlateTop3(){
-  var $plate = $('.plateTop3');
-  var distance = 768;
+  var $plate = $('#plateTop3');
+  var distance = 500;
   setInterval(function(){
     $plate.css('left', distance + 'px');
     if (distance < -300) {
@@ -39,8 +39,8 @@ function movePlateTop3(){
 };
 
 function movePlateTop4(){
-  var $plate = $('.plateTop4');
-  var distance = 512;
+  var $plate = $('#plateTop4');
+  var distance = 250;
   setInterval(function(){
     $plate.css('left', distance + 'px');
     if (distance < -300) {
@@ -52,8 +52,8 @@ function movePlateTop4(){
 };
 
 function movePlateTop5(){
-  var $plate = $('.plateTop5');
-  var distance = 256;
+  var $plate = $('#plateTop5');
+  var distance = 0;
   setInterval(function(){
     $plate.css('left', distance + 'px');
     if (distance < -300) {
@@ -78,8 +78,8 @@ $(document).ready(function(){
 // Bottom Belt
 
 function movePlateBottom(){
-  var $plate = $('.plateBottom5');
-  var distance = 1280;
+  var $plate = $('#plateBottom5');
+  var distance = 1000;
   setInterval(function(){
     $plate.css('right', distance + 'px');
     if (distance < -300) {
@@ -91,8 +91,8 @@ function movePlateBottom(){
 };
 
 function movePlateBottom2(){
-  var $plate = $('.plateBottom4');
-  var distance = 1024;
+  var $plate = $('#plateBottom4');
+  var distance = 750;
   setInterval(function(){
     $plate.css('right', distance + 'px');
     if (distance < -300) {
@@ -104,8 +104,8 @@ function movePlateBottom2(){
 };
 
 function movePlateBottom3(){
-  var $plate = $('.plateBottom3');
-  var distance = 768;
+  var $plate = $('#plateBottom3');
+  var distance = 500;
   setInterval(function(){
     $plate.css('right', distance + 'px');
     if (distance < -300) {
@@ -117,8 +117,8 @@ function movePlateBottom3(){
 };
 
 function movePlateBottom4(){
-  var $plate = $('.plateBottom2');
-  var distance = 512;
+  var $plate = $('#plateBottom2');
+  var distance = 250;
   setInterval(function(){
     $plate.css('right', distance + 'px');
     if (distance < -300) {
@@ -130,8 +130,8 @@ function movePlateBottom4(){
 };
 
 function movePlateBottom5(){
-  var $plate = $('.plateBottom1');
-  var distance = 256;
+  var $plate = $('#plateBottom1');
+  var distance = 0;
   setInterval(function(){
     $plate.css('right', distance + 'px');
     if (distance < -300) {
@@ -152,3 +152,7 @@ $(document).ready(function(){
   movePlateBottom4();})
 $(document).ready(function(){
   movePlateBottom5();})
+
+// var plateArr= document.querySelectorAll('.plate') i;
+//
+// Math.floor(Math.random(0,9))

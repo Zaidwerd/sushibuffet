@@ -8,80 +8,52 @@
 /*Conveyor Belt*/
 .plateContainer{
   height: 230px;
-  width: 100%;
+  width: auto;
   background-image: url("../images/belt.jpg");
 }
 
+.sushiPlate{
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  margin: 0, 5px;
+  background-image: url('../images/plate.png');
+  background-size: cover;
+}
+
 /*Top Belt*/
-.plateTop1{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  left: 256px;
+#plateTop1{
+  left: 0px;
 }
-.plateTop2{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  left: 512px;
+#plateTop2{
+  left: 250px;
 }
-.plateTop3{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  left: 768px;
+#plateTop3{
+  left: 500px;
 }
-.plateTop4{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  left: 1024px;
+#plateTop4{
+  left: 750px;
 }
-.plateTop5{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  left: 1280px;
+#plateTop5{
+  left: 1000px;
 }
 
 
 /*Bottom Belt*/
-.plateBottom1{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  right: 256px;
+#plateBottom1{
+  right: 0px;
 }
-.plateBottom2{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  right: 512px;
+#plateBottom2{
+  right: 250px;
 }
-.plateBottom3{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  right: 768px;
+#plateBottom3{
+  right: 500px;
 }
-.plateBottom4{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  right: 1024px;
+#plateBottom4{
+  right: 750px;
 }
-.plateBottom5{
-  height: 220px;
-  width: 23%;
-  position: absolute;
-  right: 1280px;
-}
-
-/*image size*/
-.plate{
-  height:220px;
-  width:220px;
-  margin: 0px 5px;
+#plateBottom5{
+  right: 1000px;
 }
 
 /*footer elements*/
