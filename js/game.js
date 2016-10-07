@@ -147,17 +147,16 @@ movePlateBottom5();
 
 var plateArr = $('.sushiPlate');
 var emptyPlates = [];
+var score= 0;
 
 function updateEmptyPlateArr(){
   for(var i = 0; i < plateArr.length; i++){
-    if(plateArr.html() == '0'){
+    if(plateArr.html() == ''){
       emptyPlates.push(plateArr[i])
       console.log(emptyPlates)
     }
   }
 };
-
-updateEmptyPlateArr();
 
 function randomPlate(array) {
   min= Math.ceil(0);
@@ -178,6 +177,7 @@ function addAmazingSushi(){
 function populateGoodSushi(){
   addGoodSushi();
   addAmazingSushi();
+  updateEmptyPlateArr();
 }
 setInterval(populateGoodSushi, 3000);
 setTimeout(populateGoodSushi, 5000);
