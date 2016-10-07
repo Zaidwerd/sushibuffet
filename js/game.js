@@ -173,13 +173,13 @@ function removeGoodSushi(){
 function populateGoodSushi(){
     addGoodSushi();
     removeGoodSushi();
-    setTimeout(populateGoodSushi, 3000);
+    setInterval(populateGoodSushi, 3000);
 }
 
-setInterval(populateGoodSushi, 3000);
+setTimeout(populateGoodSushi, 3000);
 
 $('.goodSushi').click(function() {
-  alert( "test" );
+  console.log('test');
   (".goodSushi").remove();
 });
 
