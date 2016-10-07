@@ -1,0 +1,41 @@
+.landing{
+  height:auto;
+  width: 100%;
+  background-image: url('../images/wood.jpg');
+  color: #ffffff;
+}
+
+.logo{
+  display: inline-block;
+  float: left;
+  margin: 40px;
+  font-family: 'Rock Salt', cursive;
+}
+.login{
+  display: inline-block;
+  float: right;
+  margin: 40px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 5px, solid white;
+}
+
+.flexboxContainer{
+  height: 600px;
+  width: 700px;
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.flexItem{
+  height: 50px;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 8%;
+
+}
+
+.flexItem2{
+
+}

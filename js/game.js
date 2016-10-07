@@ -2,10 +2,10 @@ $(document).ready(function (){
 
   // Top Belt
 function movePlateTop(){
-    var $plate = $('#plateTop1');
-    var distance = 1000;
+    let plateT = $('#plateTop1');
+    let distance = 1000;
     setInterval(function(){
-      $plate.css('left', distance + 'px');
+      plateT.css('left', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -15,10 +15,10 @@ function movePlateTop(){
   };
 
 function movePlateTop2(){
-    var $plate = $('#plateTop2');
-    var distance = 750;
+    let plateT2 = $('#plateTop2');
+    let distance = 750;
     setInterval(function(){
-      $plate.css('left', distance + 'px');
+      plateT2.css('left', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -28,10 +28,10 @@ function movePlateTop2(){
   };
 
 function movePlateTop3(){
-    var $plate = $('#plateTop3');
-    var distance = 500;
+    let plateT3 = $('#plateTop3');
+    let distance = 500;
     setInterval(function(){
-      $plate.css('left', distance + 'px');
+      plateT3.css('left', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -41,10 +41,10 @@ function movePlateTop3(){
   };
 
 function movePlateTop4(){
-    var $plate = $('#plateTop4');
-    var distance = 250;
+    let plateT4 = $('#plateTop4');
+    let distance = 250;
     setInterval(function(){
-      $plate.css('left', distance + 'px');
+      plateT4.css('left', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -54,10 +54,10 @@ function movePlateTop4(){
   };
 
 function movePlateTop5(){
-    var $plate = $('#plateTop5');
-    var distance = 0;
+    let plateT5 = $('#plateTop5');
+    let distance = 0;
     setInterval(function(){
-      $plate.css('left', distance + 'px');
+      plateT5.css('left', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -75,10 +75,10 @@ movePlateTop5();
   // Bottom Belt
 
 function movePlateBottom(){
-    var $plate = $('#plateBottom5');
-    var distance = 1000;
+    let plateB = $('#plateBottom5');
+    let distance = 1000;
     setInterval(function(){
-      $plate.css('right', distance + 'px');
+      plateB.css('right', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -88,10 +88,10 @@ function movePlateBottom(){
   };
 
 function movePlateBottom2(){
-    var $plate = $('#plateBottom4');
-    var distance = 750;
+    let plateB2 = $('#plateBottom4');
+    let distance = 750;
     setInterval(function(){
-      $plate.css('right', distance + 'px');
+      plateB2.css('right', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -101,10 +101,10 @@ function movePlateBottom2(){
   };
 
 function movePlateBottom3(){
-    var $plate = $('#plateBottom3');
-    var distance = 500;
+    let plateB3 = $('#plateBottom3');
+    let distance = 500;
     setInterval(function(){
-      $plate.css('right', distance + 'px');
+      plateB3.css('right', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -114,10 +114,10 @@ function movePlateBottom3(){
   };
 
 function movePlateBottom4(){
-    var $plate = $('#plateBottom2');
-    var distance = 250;
+    let plateB4 = $('#plateBottom2');
+    let distance = 250;
     setInterval(function(){
-      $plate.css('right', distance + 'px');
+      plateB4.css('right', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -127,10 +127,10 @@ function movePlateBottom4(){
   };
 
 function movePlateBottom5(){
-    var $plate = $('#plateBottom1');
-    var distance = 0;
+    let plateB5 = $('#plateBottom1');
+    let distance = 0;
     setInterval(function(){
-      $plate.css('right', distance + 'px');
+      plateB5.css('right', distance + 'px');
       if (distance < -300) {
         distance = 1000;
       } else {
@@ -150,40 +150,43 @@ var emptyPlates = [];
 
 function updateEmptyPlateArr(){
   for(var i = 0; i < plateArr.length; i++){
-    if(!plateArr[i].html()){
+    if(plateArr.html() == '0'){
       emptyPlates.push(plateArr[i])
-      console.log('empty')
+      console.log(emptyPlates)
     }
   }
 };
 
+updateEmptyPlateArr();
+
 function randomPlate(array) {
-   return array[Math.floor(Math.random() * plateArr.length)];
+  min= Math.ceil(0);
+  max= Math.floor(11);
+  return array [Math.floor(Math.random() * (max-min)+min)];
 }
 
 function addGoodSushi(){
-    console.log('makin good sush')
-    $(randomPlate(emptyPlates)).append("<img src='images/goodSushi.png' class= 'goodSushi'/>")
+  console.log('makin good sush')
+  $(randomPlate(emptyPlates)).append("<img src='images/goodSushi.png' class= 'goodSushi'/>")
 };
 
 function addAmazingSushi(){
-    console.log('makin some other good sush')
-    $(randomPlate(emptyPlates)).append("<img src='images/amazingSushi.png' class= 'amazingSushi'/>");
+  console.log('makin some other good sush')
+  $(randomPlate(emptyPlates)).append("<img src='images/amazingSushi.png' class= 'amazingSushi'/>");
 };
 
-
 function populateGoodSushi(){
-    addGoodSushi();
-    addAmazingSushi();
+  addGoodSushi();
+  addAmazingSushi();
 }
-
 setInterval(populateGoodSushi, 3000);
 setTimeout(populateGoodSushi, 5000);
 
-$('.goodSushi').click(function() {
-  console.log('test');
-  (".goodSushi").remove();
+$(function(){
+$('.goodSushi').on('click', '.goodSushi', function(){
+  $(this).removeClass();
+  score += 10;
+})
 });
-
 
 })
