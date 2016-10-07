@@ -18,17 +18,25 @@
   width: 220px;
   position: absolute;
   margin: 0, 5px;
+  padding: 5px;
   background-image: url('../images/plate.png');
   background-size: cover;
 }
 
 .goodSushi{
-  height: 150px;
-  width: 150px;
+  height: 140px;
+  width: 140px;
+  display: block;
   margin: auto;
-  background-size: cover;
-  text-align: center;
 }
+
+.amazingSushi{
+  height: 140px;
+  width: 140px;
+  display: block;
+  margin: auto;
+}
+
 /*Top Belt*/
 #plateTop1{
   left: 0px;
@@ -65,10 +73,11 @@
 }
 
 /*footer elements*/
-.scoreboard{
+.score{
   width:20%;
   height:120px;
   background-color: #000000;
+  color: #ffffff;
   display:inline-block;
   float:left;
 }
@@ -76,6 +85,7 @@
   width:20%;
   height:120px;
   background-color: #000000;
+  color: #ffffff;
   display:inline-block;
   float:left;
 }
