@@ -1,8 +1,11 @@
 .landing{
-  height:auto;
+  height:800px;
   width: 100%;
   background-image: url('../images/wood.jpg');
   color: #ffffff;
+  padding: 10%;
+  margin: auto;
+  text-align: center;
 }
 
 .logo{
@@ -10,32 +13,49 @@
   float: left;
   margin: 40px;
   font-family: 'Rock Salt', cursive;
+  color: #ffffff
 }
 .login{
   display: inline-block;
   float: right;
-  margin: 40px;
+  margin: 50px;
   background-color: transparent;
   color: #ffffff;
   border: 5px, solid white;
 }
 
+.welcome{
+  width: 60%
+  display: inline-block;
+  margin: 0 20%;
+  padding: 0 10%;
+  text-align: center;
+}
+
 .flexboxContainer{
-  height: 600px;
-  width: 700px;
+  height: 425px;
+  width: 600px;
+  margin: 0 20%;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 
 }
 
 .flexItem{
-  height: 50px;
-  width: 300px;
+  height: 65px;
+  width: 280px;
   background-color: #ffffff;
-  border-radius: 8%;
-
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5%;
 }
 
 .flexItem2{
-
+  height: 65px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  border-radius: 5%;
 }
