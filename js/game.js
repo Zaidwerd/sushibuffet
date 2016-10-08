@@ -148,12 +148,14 @@ movePlateBottom5();
 var plateArr = $('.sushiPlate');
 var emptyPlates = [];
 var score= 0;
+var timeSet= 60;
+var goodSushiImg = "<img src='images/goodSushi.png' class= 'goodSushi'/>";
+var amazingSushiImg = "<img src='images/amazingSushi.png' class= 'amazingSushi'/>";
 
 function updateEmptyPlateArr(){
   for(var i = 0; i < plateArr.length; i++){
     if(plateArr.html() == ''){
       emptyPlates.push(plateArr[i])
-      console.log(emptyPlates)
     }
   }
 };
@@ -165,14 +167,39 @@ function randomPlate(array) {
 }
 
 function addGoodSushi(){
-  console.log('makin good sush')
-  $(randomPlate(emptyPlates)).append("<img src='images/goodSushi.png' class= 'goodSushi'/>")
+  console.log('good')
+  $(randomPlate(emptyPlates)).append(goodSushiImg)
 };
 
 function addAmazingSushi(){
-  console.log('makin some other good sush')
-  $(randomPlate(emptyPlates)).append("<img src='images/amazingSushi.png' class= 'amazingSushi'/>");
+  console.log('amazing')
+  $(randomPlate(emptyPlates)).append(amazingSushiImg);
 };
+
+$(function(){
+$('.goodSushi').on('click', function(){
+  for (var i=0; i < plateArr.length; i++) {
+
+    if (this.html() === goodSushiImg)
+    $(this).removeClass();
+    score += 10;
+    }
+  })
+});
+
+function keepTime(){
+  $('.timer').html('Time: ' + timeSet)
+}
+
+function keepScore(){
+  $('.score').html('Score: ' + score);
+}
+
+function gameOver(){
+  if ($('.timer').html() == 0){
+    alert("Game Over" + score)
+  }
+}
 
 function populateGoodSushi(){
   addGoodSushi();
@@ -182,11 +209,6 @@ function populateGoodSushi(){
 setInterval(populateGoodSushi, 3000);
 setTimeout(populateGoodSushi, 5000);
 
-$(function(){
-$('.goodSushi').on('click', '.goodSushi', function(){
-  $(this).removeClass();
-  score += 10;
-})
+keepTime();
+keepScore();
 });
-
-})
