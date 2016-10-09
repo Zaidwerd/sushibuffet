@@ -176,17 +176,6 @@ function addAmazingSushi(){
   $(randomPlate(emptyPlates)).append(amazingSushiImg);
 };
 
-$(function(){
-$('.goodSushi').on('click', function(){
-  for (var i=0; i < plateArr.length; i++) {
-
-    if (this.html() === goodSushiImg)
-    $(this).removeClass();
-    score += 10;
-    }
-  })
-});
-
 function keepTime(){
   $('.timer').html('Time: ' + timeSet)
 }
@@ -205,7 +194,15 @@ function populateGoodSushi(){
   addGoodSushi();
   addAmazingSushi();
   updateEmptyPlateArr();
-}
+
+  $('.sushiPlate').on('click', function(){
+      var htmlstring = $('.sushiPlate').html()
+      if (htmlstring == goodSushiImg)
+      $('.goodSushi').removeClass();
+      score += 10;
+    });
+  }
+
 setInterval(populateGoodSushi, 3000);
 setTimeout(populateGoodSushi, 5000);
 

@@ -1,13 +1,13 @@
 .landing{
-  height:800px;
+  height:550px;
   width: 100%;
   background-image: url('../images/wood.jpg');
   color: #ffffff;
   padding: 10%;
-  margin: auto;
-  text-align: center;
 }
-
+.info{
+  background-color: #ffffff;
+}
 .logo{
   display: inline-block;
   float: left;
@@ -21,15 +21,16 @@
   margin: 50px;
   background-color: transparent;
   color: #ffffff;
-  border: 5px, solid white;
+  border: 2px solid white;
+  padding: 2px;
+  border-radius: 20%;
 }
 
 .welcome{
-  width: 60%
+  width: 60%;
   display: inline-block;
-  margin: 0 20%;
+  margin: 0 17%;
   padding: 0 10%;
-  text-align: center;
 }
 
 .flexboxContainer{
@@ -45,7 +46,6 @@
 .flexItem{
   height: 65px;
   width: 280px;
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   border-radius: 5%;
@@ -60,6 +60,7 @@
   border-radius: 5%;
 }
 
-.button{
+#button{
   text-align:center;
+  background-color: #e53935;
 }
