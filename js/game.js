@@ -177,7 +177,6 @@ movePlateBottom5();
 // Game play
 
 var plateArr = $('.sushiPlate');
-var emptyPlates = [];
 var score= 0;
 var timeSet= 60;
 var playing = false;
@@ -187,13 +186,13 @@ var amazingSushiImg = "<img src='images/amazingSushi.png' class= 'amazingSushi'/
 
 function keepTime(){
   var a= $('.timer');
-  a.html('Time: '+timeSet);
+  a.html('Time: ' + timeSet);
   if (timeSet< 1){
-    clearTimeout(timer);
+    clearTimeout(timeSet);
   }
   timeSet--;
-  var timer = setTimeout(keepTime(),1000);
 }
+setInterval(keepTime(),1000);
 
 function gameOver(){
   alert("Game Over" + score)
@@ -203,14 +202,6 @@ function keepScore(){
   $('.score').html('Score: ' + score);
 }
 
-function updateEmptyPlateArr(){
-  for(var i = 0; i < plateArr.length; i++){
-    if(plateArr.html() == ''){
-      emptyPlates.push(plateArr[i])
-    }
-  }
-};
-
 function randomPlate(array) {
   min= Math.ceil(0);
   max= Math.floor(11);
@@ -218,27 +209,12 @@ function randomPlate(array) {
 }
 
 function addGoodSushi() {
-  var prevScore = score;
   $(randomPlate(plateArr)).append(goodSushiImg);
-  setTimeout(function() {
-    $(goodSushiImg).remove();
-    }, 1000)
 }
 
 function addAmazingSushi() {
-  var prevScore = score;
   $(randomPlate(plateArr)).append(amazingSushiImg);
-  setTimeout(function() {
-    $(amazingSushiImg).remove();
-    }, 1000)
 }
-
-  // $('.sushiPlate').on('click', function(){
-  //     var htmlstring = $('.sushiPlate').html()
-  //     if (htmlstring == goodSushiImg)
-  //     $('.goodSushi').removeClass();
-  //     score += 10;
-  //   });
 
 $('.start').on("click", function() {
   if (!playing) {
@@ -247,9 +223,8 @@ $('.start').on("click", function() {
     keepTime();
     getSushi = setInterval(function() {
     addGoodSushi();
-    addAmazingSushi();
-    updateEmptyPlateArr()
-    }, 1500);
+    addAmazingSushi()
+  }, 1000);
   }
 });
 
@@ -270,7 +245,13 @@ for (var i = 0; i < plateArr.length; i++) {
   })
 }
 
-// setInterval(populateGoodSushi, 3000);
-// setTimeout(populateGoodSushi, 5000);
+setInterval(function() {
+  $('.goodSushi').remove();
+}, 3000)
+
+setInterval(function() {
+  $('.amazingSushi').remove();
+}, 3000)
+
 
 });
