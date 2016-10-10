@@ -1,9 +1,9 @@
-$(document).ready(function (){
+$(document).ready(function () {
 
 // grab information from landing
-function toObject(arr) {
+function toObject (arr) {
   var rv = {};
-  for (var i = 0; i < arr.length; i++){
+  for (var i = 0; i < arr.length; i++) {
     var parts = arr[i].split('=');
     if (parts.length === 2){
     var key = parts[0];
@@ -14,22 +14,22 @@ function toObject(arr) {
 return rv;
 }
 
-var inputHTML = function (name, value){
+var inputHTML = function (name, value) {
   return '<div>' + '<span>' + name + ': </span><span>' + value + '</span>' + '<input type="hidden" name="' + name +'" value="' + value +'">' + '</div>';
   }
 
 var queryString = window.location.search.substr(1).split('&');
 var myUsername = toObject(queryString);
 
-for (var key in myUsername){
-  $("#username").append($(inputHTML(key, myUsername[key])));
+for (var key in myUsername) {
+  $('#username').append($(inputHTML(key, myUsername[key])));
 }
 
 // Top Belt animation
-function movePlateTop(){
+function movePlateTop () {
   let plateT = $('#plateTop1');
   let distance = 1000;
-  setInterval(function(){
+  setInterval(function () {
     plateT.css('left', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -39,10 +39,10 @@ function movePlateTop(){
   },100);
 };
 
-function movePlateTop2(){
+function movePlateTop2 () {
   let plateT2 = $('#plateTop2');
   let distance = 750;
-  setInterval(function(){
+  setInterval(function () {
     plateT2.css('left', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -52,10 +52,10 @@ function movePlateTop2(){
   }, 100);
 };
 
-function movePlateTop3(){
+function movePlateTop3 () {
   let plateT3 = $('#plateTop3');
   let distance = 500;
-  setInterval(function(){
+  setInterval(function () {
     plateT3.css('left', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -65,10 +65,10 @@ function movePlateTop3(){
   }, 100);
 };
 
-function movePlateTop4(){
+function movePlateTop4 () {
   let plateT4 = $('#plateTop4');
   let distance = 250;
-  setInterval(function(){
+  setInterval(function () {
     plateT4.css('left', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -78,10 +78,10 @@ function movePlateTop4(){
   }, 100);
 };
 
-function movePlateTop5(){
+function movePlateTop5 () {
   let plateT5 = $('#plateTop5');
   let distance = 0;
-  setInterval(function(){
+  setInterval(function () {
     plateT5.css('left', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -91,17 +91,17 @@ function movePlateTop5(){
   }, 100);
 };
 
-movePlateTop();
-movePlateTop2();
-movePlateTop3();
-movePlateTop4();
-movePlateTop5();
+movePlateTop ();
+movePlateTop2 ();
+movePlateTop3 ();
+movePlateTop4 ();
+movePlateTop5 ();
 
 // Bottom Belt animation
-function movePlateBottom(){
+function movePlateBottom () {
   let plateB = $('#plateBottom5');
   let distance = 1000;
-  setInterval(function(){
+  setInterval(function () {
     plateB.css('right', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -111,10 +111,10 @@ function movePlateBottom(){
   }, 100);
 };
 
-function movePlateBottom2(){
+function movePlateBottom2 () {
   let plateB2 = $('#plateBottom4');
   let distance = 750;
-  setInterval(function(){
+  setInterval(function () {
     plateB2.css('right', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -124,10 +124,10 @@ function movePlateBottom2(){
   }, 100);
 };
 
-function movePlateBottom3(){
+function movePlateBottom3 () {
   let plateB3 = $('#plateBottom3');
   let distance = 500;
-  setInterval(function(){
+  setInterval(function () {
     plateB3.css('right', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -137,10 +137,10 @@ function movePlateBottom3(){
   }, 100);
 };
 
-function movePlateBottom4(){
+function movePlateBottom4 () {
   let plateB4 = $('#plateBottom2');
   let distance = 250;
-  setInterval(function(){
+  setInterval(function () {
     plateB4.css('right', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -150,10 +150,10 @@ function movePlateBottom4(){
   }, 100);
 };
 
-function movePlateBottom5(){
+function movePlateBottom5 () {
   let plateB5 = $('#plateBottom1');
   let distance = 0;
-  setInterval(function(){
+  setInterval(function () {
     plateB5.css('right', distance + 'px');
     if (distance < -300) {
       distance = 1000;
@@ -163,11 +163,11 @@ function movePlateBottom5(){
   }, 100);
 };
 
-movePlateBottom();
-movePlateBottom2();
-movePlateBottom3();
-movePlateBottom4();
-movePlateBottom5();
+movePlateBottom ();
+movePlateBottom2 ();
+movePlateBottom3 ();
+movePlateBottom4 ();
+movePlateBottom5 ();
 
 // Game play
 
@@ -175,35 +175,35 @@ var plateArr = $('.sushiPlate');
 var score=0;
 var timeSet=60;
 var playing =false;
-var start =$("#start");
+var start =$('#start');
 var goodSushiImg = "<img src='images/goodSushi.png' class= 'goodSushi'/>";
 var amazingSushiImg = "<img src='images/amazingSushi.png' class= 'amazingSushi'/>";
 
-function keepTime() {
+function keepTime () {
   var int = setInterval(function () {
   $('.timer').html('Time: ' + timeSet);
   timeSet--;
   if (timeSet === -1){
-    gameOver();
+    gameOver ();
     clearInterval(int);
   }}, 1000);
 }
 
-function gameOver(){
-  alert("Game Over! Congradualtions Your score is: " + score)
+function gameOver () {
+  alert('Game Over! Congradualtions Your score is: ' + score)
 }
 
-function keepScore(){
-  $('.score').html('Score: ' + score);
-}
+// function keepScore(){
+//   $('.score').html('Score: ' + score);
+// }
 
-function randomPlate(array) {
+function randomPlate (array) {
   min= Math.ceil(0);
   max= Math.floor(11);
   return array [Math.floor(Math.random() * (max-min)+min)];
 }
 
-function addGoodSushi() {
+function addGoodSushi () {
   $(randomPlate(plateArr)).append(goodSushiImg);
 }
 
@@ -211,20 +211,20 @@ function addGoodSushi() {
 //   $(randomPlate(plateArr)).append(amazingSushiImg);
 // }
 
-$('.start').on("click", function() {
+$('.start').on('click', function () {
   if (!playing) {
     playing = true;
     // keepScore();
-    keepTime();
-    getSushi = setInterval(function() {
-    addGoodSushi();
+    keepTime ();
+    getSushi = setInterval(function () {
+    addGoodSushi ();
     // addAmazingSushi()
   }, 500);
   }
 });
 
 for (var i = 0; i < plateArr.length; i++) {
-  $(plateArr[i]).on("click", function() {
+  $(plateArr[i]).on('click', function () {
     if (playing) {
       var $plate= $('.sushiPlate');
       var $goodSushi= $('.goodSushi');
@@ -241,8 +241,8 @@ for (var i = 0; i < plateArr.length; i++) {
   })
 }
 
-setInterval(function() {
-  $('.goodSushi').remove();
+setInterval(function () {
+  $('.goodSushi').remove ();
 }, 3000)
 
 // setInterval(function() {

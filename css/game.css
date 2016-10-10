@@ -30,12 +30,12 @@
   margin: auto;
 }
 
-.amazingSushi{
+/*.amazingSushi{
   height: 140px;
   width: 140px;
   display: block;
   margin: auto;
-}
+}*/
 
 /*Top Belt*/
 #plateTop1{
@@ -97,3 +97,25 @@
   float:left;
   font-family: 'Rock Salt', cursive;
 }
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape) {
+    .plateContainer{
+      height: 115px;
+      width: auto;
+    }
+
+    .sushiPlate{
+      height: 110px;
+      width: 110px;
+      margin: 0, 2px;
+      padding: 2px;
+    }
+
+    .goodSushi{
+      height: 120px;
+      width: 120px;
+    }
+  }
