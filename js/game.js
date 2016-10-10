@@ -22,10 +22,7 @@ $(document).ready(function (){
         '<input type="hidden" name="' + name +'" value="' + value +'">' +
       '</div>';
   }
-
   var queryString = window.location.search.substr(1).split('&');
-
-
   var myUsername = toObject(queryString);
 
   for (var key in myUsername){
@@ -189,12 +186,18 @@ var goodSushiImg = "<img src='images/goodSushi.png' class= 'goodSushi'/>";
 var amazingSushiImg = "<img src='images/amazingSushi.png' class= 'amazingSushi'/>";
 
 function keepTime(){
-  $('.timer').html('Time: ' + timeSet)
+  var a= $('.timer');
+  a.html('Time: '+timeSet);
+  if (timeSet< 1){
+    clearTimeout(timer);
+  }
+  timeSet--;
+  var timer = setTimeout(keepTime(),1000);
 }
 
 function gameOver(){
-    alert("Game Over" + score)
-  }
+  alert("Game Over" + score)
+}
 
 function keepScore(){
   $('.score').html('Score: ' + score);
@@ -215,20 +218,20 @@ function randomPlate(array) {
 }
 
 function addGoodSushi() {
-    var prevScore = score;
-    $(randomPlate(plateArr)).append(goodSushiImg);
-    setTimeout(function() {
-    	$(goodSushiImg).remove();
+  var prevScore = score;
+  $(randomPlate(plateArr)).append(goodSushiImg);
+  setTimeout(function() {
+    $(goodSushiImg).remove();
     }, 1000)
-  }
+}
 
 function addAmazingSushi() {
-    var prevScore = score;
-    $(randomPlate(plateArr)).append(amazingSushiImg);
-    setTimeout(function() {
-    	$(amazingSushiImg).remove();
+  var prevScore = score;
+  $(randomPlate(plateArr)).append(amazingSushiImg);
+  setTimeout(function() {
+    $(amazingSushiImg).remove();
     }, 1000)
-  }
+}
 
   // $('.sushiPlate').on('click', function(){
   //     var htmlstring = $('.sushiPlate').html()
@@ -237,38 +240,37 @@ function addAmazingSushi() {
   //     score += 10;
   //   });
 
-  $('.start').on("click", function() {
-      if (!playing) {
-          playing = true;
-          keepScore();
-          getSushi = setInterval(function() {
-              addGoodSushi();
-              addAmazingSushi();
-              updateEmptyPlateArr()
-          }, 1500);
-      }
-  });
-
-  for (var i = 0; i < plateArr.length; i++) {
-      $(plateArr[i]).on("click", function() {
-          if (playing) {
-              var plateArr = this;
-              if (this.innerhtml == goodSushiImg) {
-                  score+10;
-              }
-              else if(this.innerhtml == amazingSushiImg){
-                 score+20;
-              }
-              else if(timeSet === 0){
-                  gameOver();
-          	}
-              keepScore();
-          }
-      })
+$('.start').on("click", function() {
+  if (!playing) {
+    playing = true;
+    keepScore();
+    keepTime();
+    getSushi = setInterval(function() {
+    addGoodSushi();
+    addAmazingSushi();
+    updateEmptyPlateArr()
+    }, 1500);
   }
+});
+
+for (var i = 0; i < plateArr.length; i++) {
+  $(plateArr[i]).on("click", function() {
+    if (playing) {
+      var plateArr = this;
+    if (this.html() == goodSushiImg) {
+      score+10;
+    }
+    else if(this.html() == amazingSushiImg){
+      score+20;
+    }
+    else if (timeSet< 1){
+      gameOver();
+      keepScore();
+    }}
+  })
+}
 
 // setInterval(populateGoodSushi, 3000);
 // setTimeout(populateGoodSushi, 5000);
 
-keepTime();
 });
