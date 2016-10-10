@@ -1,6 +1,39 @@
 $(document).ready(function (){
 
-  // Top Belt
+// grab information from landing
+  function toObject(arr) {
+    var rv = {};
+
+    for (var i = 0; i < arr.length; i++){
+      var parts = arr[i].split('=');
+      if (parts.length === 2){
+        var key = parts[0];
+        var value = parts[1];
+        rv[key] = value;
+      }
+    }
+
+    return rv;
+  }
+
+  var inputHTML = function (name, value){
+    return '<div>' +
+        '<span>' + name + ': </span><span>' + value + '</span>' +
+        '<input type="hidden" name="' + name +'" value="' + value +'">' +
+      '</div>';
+  }
+
+  var queryString = window.location.search.substr(1).split('&');
+
+
+  var myUsername = toObject(queryString);
+
+  for (var key in myUsername){
+   $("#username").append($(inputHTML(key, myUsername[key])));
+  }
+
+
+// Top Belt animation
 function movePlateTop(){
     let plateT = $('#plateTop1');
     let distance = 1000;
@@ -72,8 +105,7 @@ movePlateTop3();
 movePlateTop4();
 movePlateTop5();
 
-  // Bottom Belt
-
+// Bottom Belt animation
 function movePlateBottom(){
     let plateB = $('#plateBottom5');
     let distance = 1000;
@@ -145,6 +177,7 @@ movePlateBottom3();
 movePlateBottom4();
 movePlateBottom5();
 
+// Game play
 var plateArr = $('.sushiPlate');
 var emptyPlates = [];
 var score= 0;
