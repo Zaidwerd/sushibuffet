@@ -56,5 +56,7 @@ GA instrcutors for keeping me on my toes throughout the entire process.
 ##Credit
 Javascript inspired by:
 animation: Trevor Preston's Ponywalk morning exercise
+
 start button and click loop: http://stackoverflow.com/questions/37642738/whack-a-mole-game-with-jquery
+
 timer countdown: http://stackoverflow.com/questions/2064186/how-can-i-make-a-jquery-countdown
