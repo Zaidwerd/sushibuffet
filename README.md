@@ -7,7 +7,7 @@ Clicker game
  Create a one - two player game that encompasses what we have learned in the first three weeks of General Assembl's Web Development Immersive. The project must have a game page and landing page. The landing pages must be a copied design. 
  
 ##Inspiration:
-![alt text] (https://github.com/Zaidwerd/sushime/blob/gh-pages/images/screenshots/WhackAMole.jpg)
+![alt text] (https://github.com/Zaidwerd/sushime/blob/master/images/WhackAMole.jpg)
 The game was inspired by whack-a-mole and sushi conveyor belt restaurants 
 
 ##Introduction:
