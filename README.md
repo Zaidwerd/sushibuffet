@@ -38,6 +38,9 @@ CSS
 Javascript
 Jquery
 
+##Unsolved Problems
+if (plateArr === empty) to use in empty plate array to stop overpopulation on div that already have the sushi image.
+
 
 ##Future Improvements
 I was not able to create the game I orignally planned. I got caught up in smaller details and did not estimate the time it would take me to figure out some of the problems. But, I would like to go back and improve this game to my original design:
