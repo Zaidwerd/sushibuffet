@@ -54,6 +54,7 @@ I was not able to create the game I orignally planned. I got caught up in smalle
 GA instrcutors for keeping me on my toes throughout the entire process.
 
 ##Credit
-I had assistance with the javascript thanks to
-http://stackoverflow.com/questions/37642738/whack-a-mole-game-with-jquery
-
+Javascript inspired by:
+animation: Trevor Preston's Ponywalk morning exercise
+start button and click loop: http://stackoverflow.com/questions/37642738/whack-a-mole-game-with-jquery
+timer countdown: http://stackoverflow.com/questions/2064186/how-can-i-make-a-jquery-countdown
