@@ -173,7 +173,7 @@ movePlateBottom5 ();
 
 var plateArr = $('.sushiPlate');
 var score=0;
-var timeSet=60;
+var timeSet=30;
 var playing =false;
 var start =$('#start');
 var goodSushiImg = "<img src='images/goodSushi.png' class= 'goodSushi'/>";
@@ -190,7 +190,7 @@ function keepTime () {
 }
 
 function gameOver () {
-  alert('Game Over! Congradualtions Your score is: ' + score)
+  alert('Game Over! Congratulations Your score is: ' + score)
 }
 
 // function keepScore(){
@@ -230,6 +230,7 @@ for (var i = 0; i < plateArr.length; i++) {
       var $goodSushi= $('.goodSushi');
       // var $amazingSushi= $('.amazingSushi');
       if ($plate.has($goodSushi)){
+        // $(goodSushi).remove ();
         console.log('sushi');
       score++;
       }
