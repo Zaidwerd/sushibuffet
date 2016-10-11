@@ -33,9 +33,13 @@ After time runs out an alert will pop up with your final score.
 The logic was to create divs with a plate as a background and append the sushi images to them randomly using random.math. This went as planned until the sushi began to continue to populate even after the first appending. I was unsuccesful in creating a seperate array that would check to see if the plate div was empty and push index to a new array used for random.math. instead I changed the set interval to a quicker progression so give it less of chance to populate in the same div. I stuggled with my things with creating this game but I look forward to improving it as times goes by.
 
 In this game I used:
+
 HTML
+
 CSS
+
 Javascript
+
 Jquery
 
 ##Unsolved Problems
@@ -46,8 +50,11 @@ if (plateArr === empty) to use in empty plate array to stop overpopulation on di
 I was not able to create the game I orignally planned. I got caught up in smaller details and did not estimate the time it would take me to figure out some of the problems. But, I would like to go back and improve this game to my original design:
 
 -Add a updating scoreboard
+
 -Add two or three more types of sushi with varying score values
+
 -Add difficulty levels 
+
 -Fix the overlap of sushi populating per plate with an empty plate array
 
 ##Thank You
