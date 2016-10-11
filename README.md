@@ -41,3 +41,8 @@ I was not able to create the game I orignally planned. I got caught up in smalle
 -Fix the overlap of sushi populating per plate
 
 ##Thank You
+GA instrcutors for keeping me on my toes throughout the entire process.
+
+##Credit
+I had assistance with the javascript thanks to
+http://stackoverflow.com/questions/37642738/whack-a-mole-game-with-jquery
