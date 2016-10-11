@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 // grab information from landing
+// taken from WDI group project
 function toObject (arr) {
   var rv = {};
   for (var i = 0; i < arr.length; i++) {
@@ -26,6 +27,7 @@ for (var key in myUsername) {
 }
 
 // Top Belt animation
+// Credit: inspired by Trevor's pony moring exercise example
 function movePlateTop () {
   let plateT = $('#plateTop1');
   let distance = 1000;
@@ -179,6 +181,7 @@ var start =$('#start');
 var goodSushiImg = "<img src='images/goodSushi.png' class= 'goodSushi'/>";
 var amazingSushiImg = "<img src='images/amazingSushi.png' class= 'amazingSushi'/>";
 
+// Credit: inspired by countdown function from Stack Overflow: Source link in README
 function keepTime () {
   var int = setInterval(function () {
   $('.timer').html('Time: ' + timeSet);
@@ -197,6 +200,7 @@ function gameOver () {
 //   $('.score').html('Score: ' + score);
 // }
 
+// Randomize plate array
 function randomPlate (array) {
   min= Math.ceil(0);
   max= Math.floor(11);
@@ -211,6 +215,8 @@ function addGoodSushi () {
 //   $(randomPlate(plateArr)).append(amazingSushiImg);
 // }
 
+
+// Credit: inspired by whack-a-mole game example from stack overflow: source link in README
 $('.start').on('click', function () {
   if (!playing) {
     playing = true;
@@ -223,6 +229,7 @@ $('.start').on('click', function () {
   }
 });
 
+// Credit: inspired by whack-a-mole game example from stack overflow: source link in README
 for (var i = 0; i < plateArr.length; i++) {
   $(plateArr[i]).on('click', function () {
     if (playing) {
